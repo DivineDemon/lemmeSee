@@ -2,6 +2,19 @@
   "name": "lemmesee",
   "private": true,
   "version": "1.0.0",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": "commonjs",
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
   "description": "",
   "main": "package.json",
   "type": "module",
