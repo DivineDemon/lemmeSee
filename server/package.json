@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
+  "type": "module",
   "author": "Mushood Hanif <supame123@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
@@ -29,6 +30,5 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11"
-  },
-  "type": "module"
+  }
 }
