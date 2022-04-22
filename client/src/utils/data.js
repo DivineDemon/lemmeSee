@@ -10,6 +10,11 @@ export const categories = [
       "https://i.pinimg.com/236x/25/14/29/251429345940a47490cc3d47dfe0a8eb.jpg",
   },
   {
+    name: "gaming",
+    image:
+      "https://i.pinimg.com/originals/7e/81/f1/7e81f17b4502e816e269201bf51cc8fa.jpg",
+  },
+  {
     name: "wallpaper",
     image:
       "https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg",
