@@ -10,6 +10,7 @@ import { fetchUser } from "../utils/fetchUser";
 const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
   const [postHovered, setPostHovered] = useState(false);
   const [savingPost, setSavingPost] = useState(false);
+
   const navigate = useNavigate();
   const user = fetchUser();
 
@@ -20,7 +21,6 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
   const savePin = (id) => {
     if (!alreadySaved) {
       setSavingPost(true);
-
       client
         .patch(id)
         .setIfMissing({ save: [] })
@@ -56,14 +56,11 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
           className="rounded-lg w-full"
         />
         {postHovered && (
-          <div
-            className="absolute top-0 w-full h-full flex flex-col justify-between pl-3 pt-4 z-50"
-            style={{ height: "100%" }}
-          >
+          <div className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50">
             <div className="flex items-center justify-between">
               <div className="flex gap-2">
                 <a
-                  href={`${image?.asset?.url}?dl=`}
+                  href={`${image?.assets?.url}?dl=`}
                   download
                   onClick={(e) => e.stopPropagation()}
                   className="bg-white w-9 h-9 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
@@ -71,7 +68,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                   <MdDownloadForOffline />
                 </a>
               </div>
-              {alreadySaved?.length !== 0 ? (
+              {alreadySaved ? (
                 <button
                   type="button"
                   className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
@@ -87,7 +84,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                   type="button"
                   className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
                 >
-                  {save?.length} {savingPost ? "Saving" : "Save"}
+                  Save
                 </button>
               )}
             </div>
