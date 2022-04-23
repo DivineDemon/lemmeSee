@@ -15,7 +15,7 @@ export const categories = [
       "https://i.pinimg.com/originals/7e/81/f1/7e81f17b4502e816e269201bf51cc8fa.jpg",
   },
   {
-    name: "wallpaper",
+    name: "wallpapers",
     image:
       "https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg",
   },
