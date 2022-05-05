@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineLogout } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
 import { useParams, useNavigate } from "react-router-dom";
 import { GoogleLogout } from "react-google-login";
 
